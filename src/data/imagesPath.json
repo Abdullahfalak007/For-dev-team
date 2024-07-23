@@ -1,0 +1,118 @@
+{
+  "Signup": {
+    "sidebarBackground": "./sidebar_background.png",
+    "logo": "./logo.svg",
+    "robotIcon": "./robot_interacting_with_computer.svg",
+    "checkmark": "./radial_checkmark.svg",
+    "eyeIcon": "./eye_icon.svg"
+  },
+  "Footer": {
+    "house": "/house_icon.svg",
+    "envelope": "/email_icon_footer.svg",
+    "phone": "/phone_icon.svg",
+    "twitter": "/twitter_icon.svg",
+    "facebook": "/facebook_icon.svg",
+    "linkedin": "/linkedin_icon.svg",
+    "instagram": "/instagram_icon.svg",
+    "youtube": "/youtube_icon.svg",
+    "fileContract": "/file_contract_icon.svg"
+  },
+  "Sidebar": {
+    "dashboard": {
+      "black": "./dashboard_icon_black.svg",
+      "white": "./dashboard_icon_white.svg"
+    },
+    "virtualAssistant": {
+      "black": "./virtual_assistant_icon_black.svg",
+      "white": "./virtual_assistant_icon_white.svg"
+    }
+  },
+  "UserSidebar": {
+    "dashboard": {
+      "black": "./dashboard_icon_black.svg",
+      "white": "./dashboard_icon_white.svg"
+    },
+    "callHistory": {
+      "black": "./call_history_icon_black.svg",
+      "white": "./call_history_icon_white.svg"
+    },
+    "settings": {
+      "black": "./settings_icon_black.png",
+      "white": "./settings_icon_white.svg"
+    },
+    "voiceAssistant": {
+      "black": "./voice_assistant_icon_black.svg",
+      "white": "./voice_assistant_icon_white.svg"
+    }
+  },
+  "AdminSidebar": {
+    "dashboard": {
+      "white": "./dashboard_icon_white.svg",
+      "black": "./dashboard_icon_black.svg"
+    },
+    "clients": {
+      "white": "./clients_icon_white.svg",
+      "black": "./clients_icon_black.svg"
+    },
+    "virtualAssistant": {
+      "white": "./virtual_assistant_icon_white.svg",
+      "black": "./virtual_assistant_icon_black.svg"
+    },
+    "knowledgeBase": {
+      "white": "./knowledgebase_icon_white.svg",
+      "black": "./knowledgebase_icon_black.svg"
+    },
+    "settings": {
+      "white": "./settings_icon_white.svg",
+      "black": "./settings_icon_black.png"
+    }
+  },
+  "AdminDashboardPage": {
+    "totalClientsIcon": "./total_clients_icon.svg",
+    "totalVAIcon": "./assign_va_icon.svg",
+    "totalBotsIcon": "./total_bots_icon.svg",
+    "totalAssistantsIcon": "./total_assistants_icon.svg",
+    "assignVAIcon": "./assign_va_icon.svg",
+    "avatar1": "./avatar1.png",
+    "avatar2": "./avatar2.png",
+    "avatar3": "./avatar3.png",
+    "avatar4": "./avatar4.png",
+    "avatar5": "./avatar5.png",
+    "avatar6": "./avatar6.png"
+  },
+  "Navbar": {
+    "searchIcon": "./search_icon.svg",
+    "addIcon": "./add_icon.svg",
+    "notificationIcon": "./notification_icon.svg",
+    "avatarIcon": "./avatar_icon.svg"
+  },
+  "VirtualAssistantTable": {
+    "arrowDownIcon": "./arrow_down_icon.svg",
+    "arrowUpIcon": "./arrow_up_icon.svg",
+    "editIcon": "./edit_icon.svg",
+    "recycleBinIcon": "./recycle_bin_icon.svg"
+  },
+  "Modal": {
+    "uploadIcon": "./upload_icon.svg",
+    "uploadIconBg": "upload_icon_bg.png"
+  },
+  "Chat": {
+    "clientBackground": "./client_background.png",
+    "aiAssistantBackground": "./ai_assistant_background.png",
+    "sendIcon": "./send_icon.svg",
+    "startIcon": "./start_icon.svg",
+    "stopIcon": "./stop_icon.svg"
+  },
+  "CallHistory": {
+    "savedFileIcon": "./saved_file_icon.png"
+  },
+  "KnowledgeBase": {
+    "editIcon": "./edit_icon_knowledge_base.svg",
+    "deleteIcon": "./recycle_bin_icon_knowledge_base.svg",
+    "pdfIcon": "./pdf_icon.svg",
+    "profile": "./bot_modal_profile_picture.svg",
+    "uploadIcon": "./upload_icon_Knowledgebase.svg",
+    "successIcon": "./success_icon.svg",
+    "erroIcon": "./error_icon.svg"
+  }
+}

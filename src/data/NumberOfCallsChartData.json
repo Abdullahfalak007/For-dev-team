@@ -1,0 +1,11 @@
+[
+  { "name": "John", "calls": 200, "avatar": "./avatar1.png" },
+  { "name": "Jane", "calls": 150, "avatar": "./avatar2.png" },
+  { "name": "Tom", "calls": 180, "avatar": "./avatar3.png" },
+  { "name": "Lucy", "calls": 220, "avatar": "./avatar4.png" },
+  { "name": "Mike", "calls": 160, "avatar": "./avatar5.png" },
+  { "name": "Emma", "calls": 190, "avatar": "./avatar6.png" },
+  { "name": "Lucy", "calls": 220, "avatar": "./avatar1.png" },
+  { "name": "Mike", "calls": 160, "avatar": "./avatar2.png" },
+  { "name": "Emma", "calls": 190, "avatar": "./avatar3.png" }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "dashboard",
+    "text": "Dashboard"
+  },
+  {
+    "icon": "clients",
+    "text": "Clients"
+  },
+  {
+    "icon": "virtualAssistant",
+    "text": "Virtual Assistants"
+  },
+  {
+    "icon": "knowledgeBase",
+    "text": "Knowledge Base"
+  },
+  {
+    "icon": "settings",
+    "text": "Settings"
+  }
+]
