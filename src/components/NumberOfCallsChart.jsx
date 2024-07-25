@@ -126,7 +126,7 @@ const NumberOfCallsChart = () => {
 
   useEffect(() => {
     dispatch(fetchtotalCallsChart()).then((totalCallsChart) => {
-      setTotalCallsChart(totalCallsChart.payload.calls);
+      setTotalCallsChart(totalCallsChart.payload);
     });
   }, [dispatch]);
 
