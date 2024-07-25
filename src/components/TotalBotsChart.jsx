@@ -10,23 +10,38 @@ import {
   Line,
 } from "recharts";
 import "../index.css"; // Import the CSS file for custom styles
-import totalBotsChartData from "../data/totalBotsChartData.json"; // Import the JSON data
+// import totalBotsChartData from "../data/totalBotsChartData.json"; // Import the JSON data
+
+import { useSelector, useDispatch } from "react-redux";
+import { fetchtotalBotsChart } from "../store/thunks/totalBotsChartThunk";
+import { useEffect } from "react";
 
 const TotalBotsChart = () => {
-  const [data, setData] = useState(totalBotsChartData.monthly);
+  const [Api, setApi] = useState();
+  const [data, setData] = useState([]);
   const [view, setView] = useState("Monthly");
+  const dispatch = useDispatch();
+  const identifier = useSelector((state) => state.totalBotsChart.identifier);
+  const authStatus = useSelector((state) => state.totalBotsChart.status);
+
+  useEffect(() => {
+    dispatch(fetchtotalBotsChart()).then((totalBotsChart) => {
+      setApi(totalBotsChart.payload);
+      setData(totalBotsChart.payload.monthly);
+    });
+  }, []);
 
   const handleViewChange = (newView) => {
     setView(newView);
     if (newView === "Monthly") {
-      setData(totalBotsChartData.monthly);
+      setData(Api.monthly);
     } else if (newView === "Daily") {
-      setData(totalBotsChartData.daily);
+      setData(Api.daily);
     } else if (newView === "Weekly") {
-      setData(totalBotsChartData.weekly);
+      setData(Api.weekly);
     }
   };
-
+  console.log({ data, Api, view });
   return (
     <div className="bg-[#EDF5FF] rounded-[1.21719rem] p-4 w-[25.0625rem] h-[25.875rem]">
       <div className="flex justify-between items-center pt-4">

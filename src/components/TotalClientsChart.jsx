@@ -8,20 +8,35 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import totalClientsChartData from "../data/totalClientsChartData.json"; // Import the JSON data
+// import totalClientsChartData from "../data/totalClientsChartData.json"; // Import the JSON data
+
+import { useSelector, useDispatch } from "react-redux";
+import { fetchtotalClientsChart } from "../store/thunks/totalClientsChartThunk";
+import { useEffect } from "react";
 
 const TotalClientsChart = () => {
-  const [data, setData] = useState(totalClientsChartData.monthly);
+  const [Api, setApi] = useState();
+  const [data, setData] = useState([]);
   const [view, setView] = useState("Monthly");
+  const dispatch = useDispatch();
+  const identifier = useSelector((state) => state.totalClientsChart.identifier);
+  const authStatus = useSelector((state) => state.totalClientsChart.status);
+
+  useEffect(() => {
+    dispatch(fetchtotalClientsChart()).then((totalClientsChart) => {
+      setApi(totalClientsChart.payload);
+      setData(totalClientsChart.payload.monthly);
+    });
+  }, []);
 
   const handleViewChange = (newView) => {
     setView(newView);
     if (newView === "Monthly") {
-      setData(totalClientsChartData.monthly);
+      setData(Api.monthly);
     } else if (newView === "Daily") {
-      setData(totalClientsChartData.daily);
+      setData(Api.daily);
     } else if (newView === "Weekly") {
-      setData(totalClientsChartData.weekly);
+      setData(Api.weekly);
     }
   };
 

@@ -3,14 +3,31 @@ import AdminSidebar from "../components/AdminSidebar";
 import Navbar from "../components/Navbar";
 import NumberOfCallsChart from "../components/NumberOfCallsChart";
 import TotalBotsChart from "../components/TotalBotsChart";
-import TotalClientsChart from "../components/TotalClientsChart"; // Import the new component
+import TotalClientsChart from "../components/TotalClientsChart";
 import imagesPath from "../data/imagesPath.json";
+import { useSelector, useDispatch } from "react-redux";
 
 const AdminDashboardPage = () => {
   const [selectedPage, setSelectedPage] = useState("Dashboard");
+  // const dispatch = useDispatch();
+  // const identifier = useSelector((state) => state.auth.identifier);
+  // const authStatus = useSelector((state) => state.auth.status);
+
+  // useEffect(() => {
+  //   const data = JSON.stringify({
+  //     group_id: 3,
+  //     crawler_slug: "tcsexpress",
+  //     trackingNo: "123",
+  //     lang: "en",
+  //   });
+  //   console.log(data);
+  //   dispatch(fetchTesting(data));
+  // }, []);
 
   return (
     <div className="flex min-h-screen w-full">
+      {/* <h1>{identifier}</h1> */}
+      {/* <h1>{authStatus}</h1> */}
       <AdminSidebar setSelectedPage={setSelectedPage} className="h-full" />
       <div className="flex-1 flex flex-col">
         <div className="w-full">

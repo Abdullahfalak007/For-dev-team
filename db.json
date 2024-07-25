@@ -1,0 +1,123 @@
+{
+  "totalBotsChart": {
+    "monthly": [
+      { "name": "Jan", "bots": 400 },
+      { "name": "Feb", "bots": 300 },
+      { "name": "Mar", "bots": 200 },
+      { "name": "Apr", "bots": 278 },
+      { "name": "May", "bots": 189 },
+      { "name": "Jun", "bots": 239 },
+      { "name": "Jul", "bots": 349 },
+      { "name": "Aug", "bots": 200 },
+      { "name": "Sep", "bots": 300 },
+      { "name": "Oct", "bots": 250 },
+      { "name": "Nov", "bots": 150 },
+      { "name": "Dec", "bots": 200 }
+    ],
+    "daily": [
+      { "name": "1", "bots": 150 },
+      { "name": "2", "bots": 200 },
+      { "name": "3", "bots": 100 },
+      { "name": "4", "bots": 300 },
+      { "name": "5", "bots": 250 },
+      { "name": "6", "bots": 350 },
+      { "name": "7", "bots": 180 },
+      { "name": "8", "bots": 120 },
+      { "name": "9", "bots": 140 },
+      { "name": "10", "bots": 220 },
+      { "name": "11", "bots": 160 },
+      { "name": "12", "bots": 200 },
+      { "name": "13", "bots": 190 },
+      { "name": "14", "bots": 210 },
+      { "name": "15", "bots": 240 },
+      { "name": "16", "bots": 230 },
+      { "name": "17", "bots": 170 },
+      { "name": "18", "bots": 180 },
+      { "name": "19", "bots": 190 },
+      { "name": "20", "bots": 250 },
+      { "name": "21", "bots": 270 },
+      { "name": "22", "bots": 260 },
+      { "name": "23", "bots": 290 },
+      { "name": "24", "bots": 300 },
+      { "name": "25", "bots": 310 },
+      { "name": "26", "bots": 320 },
+      { "name": "27", "bots": 330 },
+      { "name": "28", "bots": 340 },
+      { "name": "29", "bots": 350 },
+      { "name": "30", "bots": 360 }
+    ],
+    "weekly": [
+      { "name": "Week 1", "bots": 200 },
+      { "name": "Week 2", "bots": 150 },
+      { "name": "Week 3", "bots": 300 },
+      { "name": "Week 4", "bots": 250 }
+    ]
+  },
+  "totalClientsChart": {
+    "monthly": [
+      { "name": "Jan", "clients": 200 },
+      { "name": "Feb", "clients": 180 },
+      { "name": "Mar", "clients": 220 },
+      { "name": "Apr", "clients": 150 },
+      { "name": "May", "clients": 300 },
+      { "name": "Jun", "clients": 400 },
+      { "name": "Jul", "clients": 500 },
+      { "name": "Aug", "clients": 600 },
+      { "name": "Sep", "clients": 700 },
+      { "name": "Oct", "clients": 800 },
+      { "name": "Nov", "clients": 900 },
+      { "name": "Dec", "clients": 1000 }
+    ],
+    "daily": [
+      { "name": "1", "clients": 20 },
+      { "name": "2", "clients": 25 },
+      { "name": "3", "clients": 30 },
+      { "name": "4", "clients": 35 },
+      { "name": "5", "clients": 40 },
+      { "name": "6", "clients": 45 },
+      { "name": "7", "clients": 50 },
+      { "name": "8", "clients": 55 },
+      { "name": "9", "clients": 60 },
+      { "name": "10", "clients": 65 },
+      { "name": "11", "clients": 70 },
+      { "name": "12", "clients": 75 },
+      { "name": "13", "clients": 80 },
+      { "name": "14", "clients": 85 },
+      { "name": "15", "clients": 90 },
+      { "name": "16", "clients": 95 },
+      { "name": "17", "clients": 100 },
+      { "name": "18", "clients": 105 },
+      { "name": "19", "clients": 110 },
+      { "name": "20", "clients": 115 },
+      { "name": "21", "clients": 120 },
+      { "name": "22", "clients": 125 },
+      { "name": "23", "clients": 130 },
+      { "name": "24", "clients": 135 },
+      { "name": "25", "clients": 140 },
+      { "name": "26", "clients": 145 },
+      { "name": "27", "clients": 150 },
+      { "name": "28", "clients": 155 },
+      { "name": "29", "clients": 160 },
+      { "name": "30", "clients": 165 }
+    ],
+    "weekly": [
+      { "name": "Week 1", "clients": 200 },
+      { "name": "Week 2", "clients": 400 },
+      { "name": "Week 3", "clients": 600 },
+      { "name": "Week 4", "clients": 800 }
+    ]
+  },
+  "totalCallsChart": {
+    "calls": [
+      { "name": "John", "calls": 200, "avatar": "./avatar1.png" },
+      { "name": "Jane", "calls": 150, "avatar": "./avatar2.png" },
+      { "name": "Tom", "calls": 180, "avatar": "./avatar3.png" },
+      { "name": "Lucy", "calls": 220, "avatar": "./avatar4.png" },
+      { "name": "Mike", "calls": 160, "avatar": "./avatar5.png" },
+      { "name": "Emma", "calls": 190, "avatar": "./avatar6.png" },
+      { "name": "Lucy", "calls": 220, "avatar": "./avatar1.png" },
+      { "name": "Mike", "calls": 160, "avatar": "./avatar2.png" },
+      { "name": "Emma", "calls": 190, "avatar": "./avatar3.png" }
+    ]
+  }
+}
