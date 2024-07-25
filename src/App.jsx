@@ -22,30 +22,42 @@ const App = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-   {
+  {
     path: "/signup",
     element: <Signup />,
   },
-   {
+  {
     path: "/reset-password",
     element: <ResetPassword />,
   },
-   {
+  {
     path: "/forgot-password",
     element: <ForgotPassword />,
   },
-   {
+  {
     path: "/call-history",
     element: <CallHistoryPage />,
   },
-   {
+  {
     path: "/voice-assistant",
     element: <VoiceAssistantPage />,
   },
-   {
+  {
     path: "/virtual-assistants",
     element: <VirtualAssistantsPage />,
-  }
+  },
+  {
+    path: "/virtual-assistant",
+    element: <VirtualAssistantPageForAdmin />,
+  },
+  {
+    path: "/clients",
+    element: <ClientsPageForAdmin />,
+  },
+  {
+    path: "/Knowledge-base",
+    element: <KnowledgeBasePageForAdmin />,
+  },
 ]);
 
-export default App
+export default App;
