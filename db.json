@@ -591,7 +591,7 @@
       "representative": "Abdullah Falak",
       "email": "abdullahfalak007@gmail.com",
       "phone": "090078601",
-      "location": "Pakistan"
+      "location": "Faisalabad, Pakistan"
     }
   ],
   "virtualAssistants": [
@@ -610,6 +610,24 @@
       "number": "123456789",
       "client": "ClientA",
       "bot": "BotA"
+    },
+    {
+      "id": "3",
+      "VirtualAssistant": "",
+      "number": "454455",
+      "email": "abdullahfalak@gmail.com",
+      "password": "adasdsa",
+      "virtualAssistant": "Abdullah Falak",
+      "client": "powerphase",
+      "bot": "Genbot"
+    },
+    {
+      "id": "4",
+      "VirtualAssistant": "",
+      "number": "sasdfsadfasdfsad",
+      "email": "sadfsdf",
+      "password": "asdfasdf",
+      "virtualAssistant": "sadfsdafda"
     }
   ],
   "chatHistory": [
