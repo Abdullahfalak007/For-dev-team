@@ -1,5 +1,3 @@
-// In another file, e.g., userAPI.js or userAPI.ts
-
 import api from "./ApiBaseUrl.js";
 import axios from "axios";
 
@@ -39,13 +37,31 @@ export const userAPI = {
   clients: () => {
     return api.get(clients);
   },
-  virtualAssistants: () => {
-    return api.get(virtualAssistants);
-  },
   chatHistory: () => {
     return api.get(chatHistory);
   },
   knowledgebase: () => {
     return api.get(knowledgebase);
+  },
+  addClient: (data) => {
+    return api.post(clients, data);
+  },
+  updateClient: (id, data) => {
+    return api.put(`${clients}/${id}`, data);
+  },
+  deleteClient: (id) => {
+    return api.delete(`${clients}/${id}`);
+  },
+  virtualAssistants: () => {
+    return api.get(virtualAssistants);
+  },
+  addVirtualAssistant: (data) => {
+    return api.post(virtualAssistants, data);
+  },
+  updateVirtualAssistant: (id, data) => {
+    return api.put(`${virtualAssistants}/${id}`, data);
+  },
+  deleteVirtualAssistant: (id) => {
+    return api.delete(`${virtualAssistants}/${id}`);
   },
 };
