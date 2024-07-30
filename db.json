@@ -434,10 +434,18 @@
   },
   "clients": [
     {
+      "id": "1",
+      "client": "PowerPhase",
+      "representative": "John Oliver",
+      "email": "abc@gmail.com",
+      "phone": "03434934849",
+      "location": "USA"
+    },
+    {
       "id": "2",
       "client": "SolarTech",
-      "representative": "Osama Aziz",
-      "email": "osama.aziz@cybergen.com",
+      "representative": "Jane Smith",
+      "email": "jane@example.com",
       "phone": "1234567890",
       "location": "Canada"
     },
@@ -580,28 +588,28 @@
     {
       "id": "20",
       "client": "RenewableEnergy",
-      "representative": "Henry Wilson",
-      "email": "henry@example.com",
-      "phone": "2342342345",
-      "location": "USA"
+      "representative": "Abdullah Falak",
+      "email": "abdullahfalak007@gmail.com",
+      "phone": "090078601",
+      "location": "Pakistan"
     }
   ],
   "virtualAssistants": [
+    {
+      "id": "1",
+      "virtualAssistant": "John Oliver",
+      "email": "abc@gmail.com",
+      "number": "03434949489",
+      "client": "PowerPhase",
+      "bot": "Genbot"
+    },
     {
       "id": "2",
       "virtualAssistant": "Jane Doe",
       "email": "jane.doe@example.com",
       "number": "123456789",
       "client": "ClientA",
-      "bot": "BotAsadasdsa"
-    },
-    {
-      "id": 1,
-      "virtualAssistant": "John Oliver",
-      "email": "abc@gmail.com",
-      "number": "03434949489",
-      "client": "PowerPhase",
-      "bot": "asdasdada"
+      "bot": "BotA"
     }
   ],
   "chatHistory": [
@@ -620,7 +628,7 @@
           "text": "CyberGen is a company that specializes in providing comprehensive IT solutions..."
         }
       ],
-      "id": "203c"
+      "id": "3b29"
     },
     {
       "fileName": "Important Meeting",
@@ -637,7 +645,7 @@
           "text": "Acknowledged the meeting details."
         }
       ],
-      "id": "48b1"
+      "id": "9d10"
     }
   ],
   "knowledgebase": [
@@ -664,7 +672,10 @@
       "client": "SolarTech",
       "bot": "SunBot",
       "dateCreated": "06/15/2024",
-      "documents": ["solarDoc1.pdf", "solarDoc2.pdf"]
+      "documents": [
+        "solarDoc1.pdf",
+        "solarDoc2.pdf"
+      ]
     }
   ]
 }

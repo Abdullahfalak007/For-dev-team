@@ -34,14 +34,15 @@ export const userAPI = {
   charts: () => {
     return api.get(charts);
   },
-  clients: () => {
-    return api.get(clients);
-  },
+
   chatHistory: () => {
     return api.get(chatHistory);
   },
   knowledgebase: () => {
     return api.get(knowledgebase);
+  },
+  clients: () => {
+    return api.get(clients);
   },
   addClient: (data) => {
     return api.post(clients, data);

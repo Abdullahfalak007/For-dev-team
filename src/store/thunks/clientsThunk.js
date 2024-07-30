@@ -1,16 +1,3 @@
-// import { createAsyncThunk } from "@reduxjs/toolkit";
-// import { userAPI } from "../../api/ApiPool";
-
-// export const fetchClients = createAsyncThunk("clients/get", async (data) => {
-//   try {
-//     const response = await userAPI.clients();
-//     // console.log(response.data)
-//     return response.data;
-//   } catch (error) {
-//     return error;
-//   }
-// });
-
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { userAPI } from "../../api/ApiPool";
 
@@ -24,8 +11,17 @@ export const fetchClients = createAsyncThunk(
 
 export const addClient = createAsyncThunk(
   "clients/addClient",
-  async (clientData) => {
-    const response = await userAPI.addClient(clientData);
+  async (clientData, { getState }) => {
+    const state = getState();
+    const clients = state.clients.identifier;
+    const maxId =
+      clients.length > 0
+        ? Math.max(...clients.map((client) => parseInt(client.id)))
+        : 0;
+    const newId = (maxId + 1).toString(); // Ensure the ID is a string
+    const newClientData = { ...clientData, id: newId };
+
+    const response = await userAPI.addClient(newClientData);
     return response.data;
   }
 );
