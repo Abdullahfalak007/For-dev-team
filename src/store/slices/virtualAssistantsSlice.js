@@ -1,24 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchtotalCallsChart } from "../thunks/totalCallsChartThunk";
+import { fetchVirtualAssistants } from "../thunks/virtualAssistantsThunk";
 
-export const gettotalCallsChartSlice = createSlice({
-  name: "totalCallsChart",
+export const getVirtualAssistantsSlice = createSlice({
+  name: "virtualAssistants",
   initialState: {
-    identifier: null,
+    data: [],
     status: "idle",
   },
   reducers: {
     // Define standard reducer logic for proxy groups, if needed
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchtotalCallsChart.fulfilled, (state, action) => {
+    builder.addCase(fetchVirtualAssistants.fulfilled, (state, action) => {
       state.identifier = action.payload;
       state.status = "succeeded";
     });
-    builder.addCase(fetchtotalCallsChart.pending, (state) => {
+    builder.addCase(fetchVirtualAssistants.pending, (state) => {
       state.status = "pending";
     });
-    builder.addCase(fetchtotalCallsChart.rejected, (state) => {
+    builder.addCase(fetchVirtualAssistants.rejected, (state) => {
       state.status = "failed";
     });
   },

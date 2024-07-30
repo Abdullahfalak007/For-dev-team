@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { userAPI } from "../../api/ApiPool";
 
-export const fetchtotalCallsChart = createAsyncThunk(
-  "totalCallsChart/get",
+export const fetchVirtualAssistants = createAsyncThunk(
+  "virtualAssistants/get",
   async (data) => {
     try {
-      const response = await userAPI.totalCallsChart();
+      const response = await userAPI.virtualAssistants();
       // console.log(response.data)
       return response.data;
     } catch (error) {

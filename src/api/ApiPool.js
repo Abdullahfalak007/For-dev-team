@@ -10,14 +10,20 @@ import axios from "axios";
 // const testing = import.meta.env.VITE_TESTING;
 // console.log(testing);
 
-const totalBotsChart = import.meta.env.VITE_TOTAL_BOTS_CHART;
-console.log(totalBotsChart);
+const charts = import.meta.env.VITE_CHARTS;
+console.log(charts);
 
-const totalClientsChart = import.meta.env.VITE_TOTAL_CLIENTS_CHART;
-console.log(totalClientsChart);
+const clients = import.meta.env.VITE_CLIENTS;
+console.log(clients);
 
-const totalCallsChart = import.meta.env.VITE_TOTAL_CALLS_CHART;
-console.log(totalCallsChart);
+const virtualAssistants = import.meta.env.VITE_VIRTUAL_ASSISTANTS;
+console.log(virtualAssistants);
+
+const chatHistory = import.meta.env.VITE_CHAT_HISTORY;
+console.log(chatHistory);
+
+const knowledgebase = import.meta.env.VITE_KNOWLEDGEBASE;
+console.log(knowledgebase);
 
 export const userAPI = {
   //   auth: (data) => {
@@ -27,13 +33,19 @@ export const userAPI = {
   //       },
   //     });
   //   },
-  totalBotsChart: () => {
-    return api.get(totalBotsChart);
+  charts: () => {
+    return api.get(charts);
   },
-  totalClientsChart: () => {
-    return api.get(totalClientsChart);
+  clients: () => {
+    return api.get(clients);
   },
-  totalCallsChart: () => {
-    return api.get(totalCallsChart);
+  virtualAssistants: () => {
+    return api.get(virtualAssistants);
+  },
+  chatHistory: () => {
+    return api.get(chatHistory);
+  },
+  knowledgebase: () => {
+    return api.get(knowledgebase);
   },
 };

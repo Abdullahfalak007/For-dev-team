@@ -7,7 +7,7 @@ const VirtualAssistantsPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     id: null,
-    name: "",
+    VirtualAssistant: "",
     number: "",
     email: "",
     password: "",
@@ -19,7 +19,13 @@ const VirtualAssistantsPage = () => {
       setFormData(assistant);
       setIsEditMode(true);
     } else {
-      setFormData({ id: null, name: "", number: "", email: "", password: "" });
+      setFormData({
+        id: null,
+        VirtualAssistant: "",
+        number: "",
+        email: "",
+        password: "",
+      });
       setIsEditMode(false);
     }
     setIsModalOpen(true);

@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchtotalBotsChart } from "../thunks/totalBotsChartThunk";
+import { fetchCharts } from "../thunks/chartsThunk";
 
-export const gettotalBotsChartSlice = createSlice({
-  name: "totalBotsChart",
+export const getChartsSlice = createSlice({
+  name: "charts",
   initialState: {
     identifier: null,
     status: "idle",
@@ -11,14 +11,14 @@ export const gettotalBotsChartSlice = createSlice({
     // Define standard reducer logic for proxy groups, if needed
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchtotalBotsChart.fulfilled, (state, action) => {
+    builder.addCase(fetchCharts.fulfilled, (state, action) => {
       state.identifier = action.payload;
       state.status = "succeeded";
     });
-    builder.addCase(fetchtotalBotsChart.pending, (state) => {
+    builder.addCase(fetchCharts.pending, (state) => {
       state.status = "pending";
     });
-    builder.addCase(fetchtotalBotsChart.rejected, (state) => {
+    builder.addCase(fetchCharts.rejected, (state) => {
       state.status = "failed";
     });
   },

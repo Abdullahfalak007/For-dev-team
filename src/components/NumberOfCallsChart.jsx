@@ -87,8 +87,7 @@ import {
   LabelList,
 } from "recharts";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchtotalCallsChart } from "../store/thunks/totalCallsChartThunk";
-// import { fetchCharts } from "../store/thunks/chartsThunk";
+import { fetchCharts } from "../store/thunks/chartsThunk";
 
 const CustomXAxisTick = ({ x, y, payload, data }) => {
   const avatar = data[payload.index]?.avatar; // Ensure data is not undefined
@@ -121,12 +120,12 @@ const CustomLabel = ({ x, y }) => {
 const NumberOfCallsChart = () => {
   const [totalCallsChart, setTotalCallsChart] = useState([]);
   const dispatch = useDispatch();
-  const identifier = useSelector((state) => state.totalCallsChart.identifier);
-  const authStatus = useSelector((state) => state.totalCallsChart.status);
+  const identifier = useSelector((state) => state.charts.identifier);
+  const authStatus = useSelector((state) => state.charts.status);
 
   useEffect(() => {
-    dispatch(fetchtotalCallsChart()).then((totalCallsChart) => {
-      setTotalCallsChart(totalCallsChart.payload);
+    dispatch(fetchCharts()).then((charts) => {
+      setTotalCallsChart(charts.payload.totalCallsChart);
     });
   }, [dispatch]);
 

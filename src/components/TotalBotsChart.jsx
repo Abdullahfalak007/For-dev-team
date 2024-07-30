@@ -13,7 +13,7 @@ import "../index.css"; // Import the CSS file for custom styles
 // import totalBotsChartData from "../data/totalBotsChartData.json"; // Import the JSON data
 
 import { useSelector, useDispatch } from "react-redux";
-import { fetchtotalBotsChart } from "../store/thunks/totalBotsChartThunk";
+import { fetchCharts } from "../store/thunks/chartsThunk";
 import { useEffect } from "react";
 
 const TotalBotsChart = () => {
@@ -21,13 +21,13 @@ const TotalBotsChart = () => {
   const [data, setData] = useState([]);
   const [view, setView] = useState("Monthly");
   const dispatch = useDispatch();
-  const identifier = useSelector((state) => state.totalBotsChart.identifier);
-  const authStatus = useSelector((state) => state.totalBotsChart.status);
+  const identifier = useSelector((state) => state.charts.identifier);
+  const authStatus = useSelector((state) => state.charts.status);
 
   useEffect(() => {
-    dispatch(fetchtotalBotsChart()).then((totalBotsChart) => {
-      setApi(totalBotsChart.payload);
-      setData(totalBotsChart.payload.monthly);
+    dispatch(fetchCharts()).then((charts) => {
+      setApi(charts.payload.totalBotsChart);
+      setData(charts.payload.totalBotsChart.monthly);
     });
   }, []);
 

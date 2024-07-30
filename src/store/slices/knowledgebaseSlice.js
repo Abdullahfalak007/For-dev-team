@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchtotalClientsChart } from "../thunks/totalClientsChartThunk";
+import { fetchKnowledgebase } from "../thunks/knowledgebaseThunk";
 
-export const gettotalClientsChartSlice = createSlice({
-  name: "totalClientsChart",
+export const getKnowledgebaseSlice = createSlice({
+  name: "knowledgebase",
   initialState: {
     identifier: null,
     status: "idle",
@@ -11,14 +11,14 @@ export const gettotalClientsChartSlice = createSlice({
     // Define standard reducer logic for proxy groups, if needed
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchtotalClientsChart.fulfilled, (state, action) => {
+    builder.addCase(fetchKnowledgebase.fulfilled, (state, action) => {
       state.identifier = action.payload;
       state.status = "succeeded";
     });
-    builder.addCase(fetchtotalClientsChart.pending, (state) => {
+    builder.addCase(fetchKnowledgebase.pending, (state) => {
       state.status = "pending";
     });
-    builder.addCase(fetchtotalClientsChart.rejected, (state) => {
+    builder.addCase(fetchKnowledgebase.rejected, (state) => {
       state.status = "failed";
     });
   },

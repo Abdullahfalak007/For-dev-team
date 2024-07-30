@@ -95,8 +95,8 @@ const Modal = ({
           <FormField
             label="Name"
             type="text"
-            name="name"
-            value={formData.name}
+            name="virtualAssistant"
+            value={formData.virtualAssistant}
             onChange={handleChange}
           />
           <FormField

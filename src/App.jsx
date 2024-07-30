@@ -47,7 +47,7 @@ const App = createBrowserRouter([
     element: <VirtualAssistantsPage />,
   },
   {
-    path: "/virtual-assistant",
+    path: "/virtual-assistants-admin",
     element: <VirtualAssistantPageForAdmin />,
   },
   {
@@ -55,7 +55,7 @@ const App = createBrowserRouter([
     element: <ClientsPageForAdmin />,
   },
   {
-    path: "/Knowledge-base",
+    path: "/knowledge-base",
     element: <KnowledgeBasePageForAdmin />,
   },
 ]);

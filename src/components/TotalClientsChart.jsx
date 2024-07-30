@@ -11,21 +11,21 @@ import {
 // import totalClientsChartData from "../data/totalClientsChartData.json"; // Import the JSON data
 
 import { useSelector, useDispatch } from "react-redux";
-import { fetchtotalClientsChart } from "../store/thunks/totalClientsChartThunk";
+import { fetchCharts } from "../store/thunks/chartsThunk";
 import { useEffect } from "react";
 
 const TotalClientsChart = () => {
   const [Api, setApi] = useState();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const [view, setView] = useState("Monthly");
   const dispatch = useDispatch();
-  const identifier = useSelector((state) => state.totalClientsChart.identifier);
-  const authStatus = useSelector((state) => state.totalClientsChart.status);
+  const identifier = useSelector((state) => state.charts.identifier);
+  const authStatus = useSelector((state) => state.charts.status);
 
   useEffect(() => {
-    dispatch(fetchtotalClientsChart()).then((totalClientsChart) => {
-      setApi(totalClientsChart.payload);
-      setData(totalClientsChart.payload.monthly);
+    dispatch(fetchCharts()).then((charts) => {
+      setApi(charts.payload.totalClientsChart);
+      setData(charts.payload.totalClientsChart.monthly);
     });
   }, []);
 
