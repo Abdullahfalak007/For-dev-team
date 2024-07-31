@@ -632,180 +632,51 @@
   ],
   "chatHistory": [
     {
-      "fileName": "New Call",
-      "client": "ZPL",
-      "date": "24/07/2024",
-      "time": "4:22 PM",
-      "chat": [
-        {
-          "sender": "Client",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions and advanced technology tailored for businesses. We offer a range of services including Cyber Security Solutions, Software Development, Marketing Services, Managed Services, Professional Services, Strategic Staffing, Technical Training, and Artificial Intelligence.",
-          "timestamp": "2024-07-24T16:22:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions...",
-          "timestamp": "2024-07-24T16:23:00Z"
-        }
-      ],
-      "aiResponses": [
-        {
-          "sender": "AI",
-          "text": "This is an AI response for the message from CyberGen.",
-          "timestamp": "2024-07-24T16:24:00Z"
-        }
-      ],
-      "id": "3b29"
-    },
-    {
-      "fileName": "Important Meeting",
-      "client": "ABC Corp",
-      "date": "25/07/2024",
+      "id": "unique-file-id-1",
+      "fileName": "fileData.json",
+      "client": "Client Name",
+      "date": "2024-07-24",
       "time": "10:00 AM",
-      "chat": [
+      "clientMessages": [
         {
-          "sender": "Client",
-          "text": "Important meeting details from the client.",
-          "timestamp": "2024-07-25T10:00:00Z"
+          "id": 1,
+          "text": "CyberGen is a company that specializes in...",
+          "timestamp": "2024-07-24T10:00:00Z"
         },
         {
-          "sender": "User Name",
-          "text": "Acknowledged the meeting details.",
-          "timestamp": "2024-07-25T10:01:00Z"
+          "id": 2,
+          "text": "My name is Abdullah Falak",
+          "timestamp": "2024-07-24T10:01:00Z"
+        }
+      ],
+      "userMessages": [
+        {
+          "id": 1,
+          "text": "CyberGen is a company that...",
+          "timestamp": "2024-07-24T10:05:00Z"
         }
       ],
       "aiResponses": [
         {
-          "sender": "AI",
-          "text": "Acknowledged the meeting details.",
-          "timestamp": "2024-07-25T10:02:00Z"
+          "id": 1,
+          "text": "This is a random response...",
+          "timestamp": "2024-07-24T10:07:00Z"
         }
       ],
-      "id": "9d10"
-    },
-    {
-      "id": "3b29",
-      "fileName": "New Call",
-      "client": "ZPL",
-      "date": "24/07/2024",
-      "time": "4:22 PM",
-      "chat": [
+      "inputMessages": [
         {
-          "sender": "Client",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions and advanced technology tailored for businesses. We offer a range of services including Cyber Security Solutions, Software Development, Marketing Services, Managed Services, Professional Services, Strategic Staffing, Technical Training, and Artificial Intelligence.",
-          "timestamp": "2024-07-24T16:22:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions...",
-          "timestamp": "2024-07-24T16:23:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "asdas",
-          "timestamp": "2024-07-30T13:48:26.720Z"
-        }
-      ],
-      "aiResponses": [
-        {
-          "sender": "AI",
-          "text": "This is an AI response for the message from CyberGen.",
-          "timestamp": "2024-07-24T16:24:00Z"
-        }
-      ]
-    },
-    {
-      "id": "3b29",
-      "fileName": "New Call",
-      "client": "ZPL",
-      "date": "24/07/2024",
-      "time": "4:22 PM",
-      "chat": [
-        {
-          "sender": "Client",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions and advanced technology tailored for businesses. We offer a range of services including Cyber Security Solutions, Software Development, Marketing Services, Managed Services, Professional Services, Strategic Staffing, Technical Training, and Artificial Intelligence.",
-          "timestamp": "2024-07-24T16:22:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions...",
-          "timestamp": "2024-07-24T16:23:00Z"
-        },
-        {
-          "sender": "User Name",
+          "id": 1,
           "text": "asdasd",
-          "timestamp": "2024-07-30T13:48:29.166Z"
+          "timestamp": "2024-07-31T10:25:51.486Z"
+        },
+        {
+          "id": 2,
+          "text": "dsfdasfsd",
+          "timestamp": "2024-07-31T10:26:15.996Z"
         }
       ],
-      "aiResponses": [
-        {
-          "sender": "AI",
-          "text": "This is an AI response for the message from CyberGen.",
-          "timestamp": "2024-07-24T16:24:00Z"
-        }
-      ]
-    },
-    {
-      "id": "3b29",
-      "fileName": "New Call",
-      "client": "ZPL",
-      "date": "24/07/2024",
-      "time": "4:22 PM",
-      "chat": [
-        {
-          "sender": "Client",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions and advanced technology tailored for businesses. We offer a range of services including Cyber Security Solutions, Software Development, Marketing Services, Managed Services, Professional Services, Strategic Staffing, Technical Training, and Artificial Intelligence.",
-          "timestamp": "2024-07-24T16:22:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions...",
-          "timestamp": "2024-07-24T16:23:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "asdasdasdsad",
-          "timestamp": "2024-07-30T13:48:49.570Z"
-        }
-      ],
-      "aiResponses": [
-        {
-          "sender": "AI",
-          "text": "This is an AI response for the message from CyberGen.",
-          "timestamp": "2024-07-24T16:24:00Z"
-        }
-      ]
-    },
-    {
-      "id": "3b29",
-      "fileName": "New Call",
-      "client": "ZPL",
-      "date": "24/07/2024",
-      "time": "4:22 PM",
-      "chat": [
-        {
-          "sender": "Client",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions and advanced technology tailored for businesses. We offer a range of services including Cyber Security Solutions, Software Development, Marketing Services, Managed Services, Professional Services, Strategic Staffing, Technical Training, and Artificial Intelligence.",
-          "timestamp": "2024-07-24T16:22:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "CyberGen is a company that specializes in providing comprehensive IT solutions...",
-          "timestamp": "2024-07-24T16:23:00Z"
-        },
-        {
-          "sender": "User Name",
-          "text": "asdasdasd",
-          "timestamp": "2024-07-30T13:58:05.021Z"
-        }
-      ],
-      "aiResponses": [
-        {
-          "sender": "AI",
-          "text": "This is an AI response for the message from CyberGen.",
-          "timestamp": "2024-07-24T16:24:00Z"
-        }
-      ]
+      "selectedText": "My name is Abdullah Fal",
+      "selectedTextId": "1"
     }
   ],
   "knowledgebase": [
@@ -832,10 +703,7 @@
       "client": "SolarTech",
       "bot": "SunBot",
       "dateCreated": "06/15/2024",
-      "documents": [
-        "solarDoc1.pdf",
-        "solarDoc2.pdf"
-      ]
+      "documents": ["solarDoc1.pdf", "solarDoc2.pdf"]
     }
   ]
 }

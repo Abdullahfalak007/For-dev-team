@@ -1,32 +1,19 @@
-// // src/pages/VoiceAssistantPage.jsx
 // import React, { useState, useEffect, useRef } from "react";
 // import Navbar from "../components/Navbar";
 // import UserSidebar from "../components/UserSidebar";
-// import FileNameModal from "../components/FileNameModal"; // Make sure to create this component
+// import FileNameModal from "../components/FileNameModal";
 // import imagesPath from "../data/imagesPath.json";
-// import "../index.css"; // Ensure this import is present for custom scrollbar styles
+// import fileData from "../data/fileData.json";
+// import "../index.css";
 
 // const VoiceAssistantPage = () => {
 //   const [userInput, setUserInput] = useState("");
-//   const [clientMessages, setClientMessages] = useState([
-//     {
-//       id: 1,
-//       text: "CyberGen is a company that specializes in providing comprehensive IT solutions and advanced technology tailored for businesses. We offer a range of services including Cyber Security Solutions, Software Development, Marketing Services, Managed Services, Professional Services, Strategic Staffing, Technical Training, and Artificial Intelligence.",
-//     },
-//   ]);
-//   const [userMessages, setUserMessages] = useState([
-//     {
-//       id: 1,
-//       text: "CyberGen is a company that specializes in providing comprehensive IT solutions...",
-//     },
-//   ]);
-//   const [aiResponses, setAiResponses] = useState([
-//     { id: 1, text: "This is an AI response for the message from CyberGen." },
-//   ]);
+//   const [clientMessages, setClientMessages] = useState([]);
+//   const [userMessages, setUserMessages] = useState([]);
+//   const [aiResponses, setAiResponses] = useState([]);
 //   const [inputMessages, setInputMessages] = useState([]);
-//   const [selectedPage, setSelectedPage] = useState("Voice Assistants");
+//   const [selectedTextPosition, setSelectedTextPosition] = useState(null);
 //   const [isStarted, setIsStarted] = useState(false);
-//   const [isTextSelected, setIsTextSelected] = useState(false);
 //   const [isModalOpen, setIsModalOpen] = useState(false);
 //   const sidebarRef = useRef(null);
 
@@ -50,7 +37,24 @@
 //   useEffect(() => {
 //     const handleSelectionChange = () => {
 //       const selection = window.getSelection();
-//       setIsTextSelected(selection && selection.toString().length > 0);
+//       if (selection && selection.toString().length > 0) {
+//         const selectedElement = selection.anchorNode.parentElement;
+//         if (
+//           selectedElement &&
+//           selectedElement.classList.contains("selectable-text")
+//         ) {
+//           const container = selectedElement.closest(".relative");
+//           if (container) {
+//             const containerRect = container.getBoundingClientRect();
+//             setSelectedTextPosition({
+//               top: containerRect.bottom + window.scrollY,
+//               left: containerRect.left + containerRect.width / 2,
+//             });
+//           }
+//         }
+//       } else {
+//         setSelectedTextPosition(null);
+//       }
 //     };
 
 //     document.addEventListener("selectionchange", handleSelectionChange);
@@ -60,16 +64,25 @@
 //     };
 //   }, []);
 
+//   useEffect(() => {
+//     setClientMessages(fileData.clientMessages || []);
+//     setUserMessages(fileData.userMessages || []);
+//     setAiResponses(fileData.aiResponses || []);
+//     setInputMessages(fileData.inputMessages || []);
+//   }, []);
+
 //   const handleInputChange = (e) => {
 //     setUserInput(e.target.value);
 //   };
 
 //   const handleSend = () => {
 //     if (userInput.trim()) {
-//       setInputMessages((prevMessages) => [
-//         ...prevMessages,
-//         { id: prevMessages.length + 1, text: userInput },
-//       ]);
+//       const newMessage = {
+//         id: inputMessages.length + 1,
+//         text: userInput,
+//         timestamp: new Date().toISOString(),
+//       };
+//       setInputMessages((prevMessages) => [...prevMessages, newMessage]);
 //       setUserInput("");
 //     }
 //   };
@@ -83,7 +96,7 @@
 
 //   const handleStartStop = () => {
 //     if (isStarted) {
-//       setIsModalOpen(true); // Open the modal when stopping
+//       setIsModalOpen(true);
 //     }
 //     setIsStarted(!isStarted);
 //   };
@@ -100,7 +113,7 @@
 //   return (
 //     <div className="flex">
 //       <div className="h-full" ref={sidebarRef}>
-//         <UserSidebar setSelectedPage={setSelectedPage} className="h-full" />
+//         <UserSidebar className="h-full" />
 //       </div>
 //       <div className="flex-1 flex flex-col">
 //         <div className="flex-shrink-0">
@@ -150,39 +163,48 @@
 //                   Client
 //                 </h3>
 //                 <div className="relative">
-//                   <p className="mt-2 p-8 bg-white rounded-lg shadow text-[#333232] font-poppins text-[0.9375rem] font-normal">
+//                   <p
+//                     className="mt-2 p-8 bg-white rounded-lg shadow text-[#333232] font-poppins text-[0.9375rem] font-normal selectable-text"
+//                     data-id={message.id}
+//                   >
 //                     {message.text}
 //                   </p>
-//                   {isTextSelected && (
-//                     <div className="absolute bottom-[-0.8125rem] left-1/2 transform -translate-x-1/2">
-//                       <button className="bg-[#E3EDFF] text-customBlue rounded-full w-[5rem] h-[1.625rem] text-[#0771EF] font-poppins text-[0.68456rem] font-normal">
-//                         Ask AI
-//                       </button>
-//                     </div>
-//                   )}
 //                 </div>
 //               </div>
 //             ))}
 //             {userMessages.map((message) => (
-//               <div
-//                 key={message.id}
-//                 className="relative mb-8 flex justify-end items-center"
-//               >
+//               <div key={message.id} className="relative mb-8">
 //                 <div className="text-right mr-4">
 //                   <h3 className="text-customBlue font-poppins text-[1.12625rem] font-semibold leading-normal">
 //                     User Name
 //                   </h3>
-//                   <p className="mt-2 p-4 bg-white rounded-lg shadow text-[#333232] font-poppins text-[0.9375rem] font-normal">
+//                   <p
+//                     className="mt-2 p-4 bg-white rounded-lg shadow text-[#333232] font-poppins text-[0.9375rem] font-normal selectable-text"
+//                     data-id={message.id}
+//                   >
 //                     {message.text}
 //                   </p>
 //                 </div>
 //               </div>
 //             ))}
+//             {selectedTextPosition && (
+//               <div
+//                 className="absolute transform -translate-x-1/2"
+//                 style={{
+//                   top: selectedTextPosition.top - 170,
+//                   left: selectedTextPosition.left - 350,
+//                   transform: "translate(-50%, 0)",
+//                 }}
+//               >
+//                 <button className="bg-[#E3EDFF] text-customBlue rounded-full w-[5rem] h-[1.625rem] text-[#0771EF] font-poppins text-[0.68456rem] font-normal">
+//                   Ask AI
+//                 </button>
+//               </div>
+//             )}
 //           </div>
 //           <h3 className="text-customBlue font-poppins text-[1.12625rem] font-semibold leading-normal mt-2 ml-8">
 //             AI Assistant
 //           </h3>
-//           {/* New AI Assistant Container */}
 //           <div
 //             className="relative bg-white shadow-md p-8 overflow-auto custom-scrollbar mt-2"
 //             style={{
@@ -244,23 +266,31 @@
 // export default VoiceAssistantPage;
 
 import React, { useState, useEffect, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  fetchChatHistory,
+  updateSelectedText,
+  addInputMessage,
+} from "../store/thunks/chatHistoryThunk";
 import Navbar from "../components/Navbar";
 import UserSidebar from "../components/UserSidebar";
 import FileNameModal from "../components/FileNameModal";
 import imagesPath from "../data/imagesPath.json";
-import fileData from "../data/fileData.json";
 import "../index.css";
 
 const VoiceAssistantPage = () => {
+  const dispatch = useDispatch();
+  const chatHistory = useSelector((state) => state.chatHistory.currentFile);
   const [userInput, setUserInput] = useState("");
-  const [clientMessages, setClientMessages] = useState([]);
-  const [userMessages, setUserMessages] = useState([]);
-  const [aiResponses, setAiResponses] = useState([]);
-  const [inputMessages, setInputMessages] = useState([]);
   const [selectedTextPosition, setSelectedTextPosition] = useState(null);
   const [isStarted, setIsStarted] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const sidebarRef = useRef(null);
+  const fileId = "unique-file-id-1"; // Change to the appropriate file ID
+
+  useEffect(() => {
+    dispatch(fetchChatHistory(fileId));
+  }, [dispatch]);
 
   useEffect(() => {
     const updateSidebarHeight = () => {
@@ -295,6 +325,13 @@ const VoiceAssistantPage = () => {
               top: containerRect.bottom + window.scrollY,
               left: containerRect.left + containerRect.width / 2,
             });
+
+            // Dispatch the selected text to be saved
+            const selectedText = selection.toString();
+            const selectedTextId = selectedElement.getAttribute("data-id");
+            dispatch(
+              updateSelectedText({ fileId, selectedTextId, selectedText })
+            );
           }
         }
       } else {
@@ -307,14 +344,7 @@ const VoiceAssistantPage = () => {
     return () => {
       document.removeEventListener("selectionchange", handleSelectionChange);
     };
-  }, []);
-
-  useEffect(() => {
-    setClientMessages(fileData.clientMessages || []);
-    setUserMessages(fileData.userMessages || []);
-    setAiResponses(fileData.aiResponses || []);
-    setInputMessages(fileData.inputMessages || []);
-  }, []);
+  }, [dispatch]);
 
   const handleInputChange = (e) => {
     setUserInput(e.target.value);
@@ -323,11 +353,14 @@ const VoiceAssistantPage = () => {
   const handleSend = () => {
     if (userInput.trim()) {
       const newMessage = {
-        id: inputMessages.length + 1,
+        id: chatHistory?.inputMessages?.length + 1 || 1,
         text: userInput,
         timestamp: new Date().toISOString(),
       };
-      setInputMessages((prevMessages) => [...prevMessages, newMessage]);
+
+      // Dispatch the action to add the input message
+      dispatch(addInputMessage({ fileId, newMessage }));
+
       setUserInput("");
     }
   };
@@ -402,7 +435,7 @@ const VoiceAssistantPage = () => {
               borderRadius: "0.9375rem",
             }}
           >
-            {clientMessages.map((message) => (
+            {chatHistory?.clientMessages.map((message) => (
               <div key={message.id} className="relative mb-8">
                 <h3 className="text-customBlue font-poppins text-[1.12625rem] font-semibold leading-normal">
                   Client
@@ -417,7 +450,7 @@ const VoiceAssistantPage = () => {
                 </div>
               </div>
             ))}
-            {userMessages.map((message) => (
+            {chatHistory?.userMessages.map((message) => (
               <div key={message.id} className="relative mb-8">
                 <div className="text-right mr-4">
                   <h3 className="text-customBlue font-poppins text-[1.12625rem] font-semibold leading-normal">
@@ -461,14 +494,14 @@ const VoiceAssistantPage = () => {
             }}
           >
             <div className="relative">
-              {aiResponses.map((response) => (
+              {chatHistory?.aiResponses.map((response) => (
                 <div key={response.id} className="flex justify-start mt-2">
                   <p className="text-[#333232] font-poppins text-base p-2 text-[0.937rem]">
                     {response.text}
                   </p>
                 </div>
               ))}
-              {inputMessages.map((message) => (
+              {chatHistory?.inputMessages.map((message) => (
                 <div key={message.id} className="flex justify-end mt-2">
                   <p className="text-[#333232] font-poppins text-base p-4 bg-white rounded-lg shadow">
                     {message.text}
