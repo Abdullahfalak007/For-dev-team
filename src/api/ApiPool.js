@@ -34,9 +34,17 @@ export const userAPI = {
   charts: () => {
     return api.get(charts);
   },
-
   chatHistory: () => {
     return api.get(chatHistory);
+  },
+  addChatHistory: (data) => {
+    return api.post(chatHistory, data);
+  },
+  updateChatHistory: (id, data) => {
+    return api.put(`${chatHistory}/${id}`, data);
+  },
+  deleteChatHistory: (id) => {
+    return api.delete(`${chatHistory}/${id}`);
   },
   knowledgebase: () => {
     return api.get(knowledgebase);
