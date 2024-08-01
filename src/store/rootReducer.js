@@ -1,6 +1,3 @@
-// src/store/reducers.ts
-
-// Import the combineReducers function
 import { combineReducers } from "@reduxjs/toolkit";
 
 import { getAuthSlice } from "./slices/AuthSlice";
@@ -10,7 +7,6 @@ import { getVirtualAssistantsSlice } from "./slices/virtualAssistantsSlice";
 import { getChatHistorySlice } from "./slices/chatHistorySlice";
 import { getKnowledgebaseSlice } from "./slices/knowledgebaseSlice";
 
-// Combine all reducers into a single root reducer
 const rootReducer = combineReducers({
   auth: getAuthSlice.reducer,
   charts: getChartsSlice.reducer,
@@ -20,5 +16,4 @@ const rootReducer = combineReducers({
   knowledgebase: getKnowledgebaseSlice.reducer,
 });
 
-// Export the root reducer
 export default rootReducer;

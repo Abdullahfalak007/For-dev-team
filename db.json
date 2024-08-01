@@ -592,6 +592,14 @@
       "email": "abdullahfalak007@gmail.com",
       "phone": "090078601",
       "location": "Faisalabad, Pakistan"
+    },
+    {
+      "id": "21",
+      "client": "Haroon Rasheed",
+      "representative": "Muhammad Abdullah Falak",
+      "email": "random@gmail.com",
+      "phone": "090078601",
+      "location": "Islamabad"
     }
   ],
   "virtualAssistants": [
@@ -633,7 +641,7 @@
   "chatHistory": [
     {
       "id": "unique-file-id-1",
-      "fileName": "fileData.json",
+      "fileName": "Ali",
       "client": "Client Name",
       "date": "2024-07-24",
       "time": "10:00 AM",
@@ -642,11 +650,6 @@
           "id": 1,
           "text": "CyberGen is a company that specializes in...",
           "timestamp": "2024-07-24T10:00:00Z"
-        },
-        {
-          "id": 2,
-          "text": "My name is Abdullah Falak",
-          "timestamp": "2024-07-24T10:01:00Z"
         }
       ],
       "userMessages": [
@@ -659,23 +662,28 @@
       "aiResponses": [
         {
           "id": 1,
-          "text": "This is a random response...",
+          "text": "This is an AI response...",
           "timestamp": "2024-07-24T10:07:00Z"
         }
       ],
       "inputMessages": [
         {
           "id": 1,
-          "text": "asdasd",
-          "timestamp": "2024-07-31T10:25:51.486Z"
+          "text": "dasdsad",
+          "timestamp": "2024-07-31T11:11:46.233Z"
         },
         {
           "id": 2,
-          "text": "dsfdasfsd",
-          "timestamp": "2024-07-31T10:26:15.996Z"
+          "text": "sdafadsfdfs",
+          "timestamp": "2024-07-31T11:20:41.979Z"
+        },
+        {
+          "id": 3,
+          "text": "asdasddasdsadsa",
+          "timestamp": "2024-08-01T09:48:05.528Z"
         }
       ],
-      "selectedText": "My name is Abdullah Fal",
+      "selectedText": "en is a company that spe",
       "selectedTextId": "1"
     }
   ],
@@ -703,7 +711,10 @@
       "client": "SolarTech",
       "bot": "SunBot",
       "dateCreated": "06/15/2024",
-      "documents": ["solarDoc1.pdf", "solarDoc2.pdf"]
+      "documents": [
+        "solarDoc1.pdf",
+        "solarDoc2.pdf"
+      ]
     }
   ]
 }

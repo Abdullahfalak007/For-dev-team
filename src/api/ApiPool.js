@@ -42,18 +42,10 @@ export const userAPI = {
   knowledgebase: () => {
     return api.get(knowledgebase);
   },
-  clients: () => {
-    return api.get(clients);
-  },
-  addClient: (data) => {
-    return api.post(clients, data);
-  },
-  updateClient: (id, data) => {
-    return api.put(`${clients}/${id}`, data);
-  },
-  deleteClient: (id) => {
-    return api.delete(`${clients}/${id}`);
-  },
+  clients: () => api.get(clients),
+  addClient: (data) => api.post(clients, data),
+  updateClient: (id, data) => api.put(`${clients}/${id}`, data),
+  deleteClient: (id) => api.delete(`${clients}/${id}`),
   virtualAssistants: () => {
     return api.get(virtualAssistants);
   },
