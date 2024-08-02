@@ -360,8 +360,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import imagesPath from "../data/imagesPath.json";
 import FormField from "./FormField";
-import virtualAssistantsData from "../data/virtualAssistantsData.json";
-import clientsData from "../data/clientsData.json";
 import "../index.css";
 
 const VirtualAssistantForAdminModal = ({
@@ -378,32 +376,6 @@ const VirtualAssistantForAdminModal = ({
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-
-  const handleVirtualAssistantChange = (e) => {
-    const selectedAssistant = virtualAssistantsData.find(
-      (assistant) => assistant.virtualAssistant === e.target.value
-    );
-
-    if (selectedAssistant) {
-      setFormData({
-        ...formData,
-        virtualAssistant: selectedAssistant.virtualAssistant,
-        email: selectedAssistant.email,
-        number: selectedAssistant.number,
-        client: selectedAssistant.client,
-        id: selectedAssistant.id,
-      });
-    } else {
-      setFormData({
-        ...formData,
-        virtualAssistant: e.target.value,
-        email: "",
-        number: "",
-        client: "",
-        id: null,
-      });
-    }
   };
 
   const handleClickOutside = (event) => {
@@ -482,8 +454,8 @@ const VirtualAssistantForAdminModal = ({
           <FormField
             label="Virtual Assistant"
             type="text"
-            name="virtualAssistant"
-            value={formData.virtualAssistant}
+            name="name"
+            value={formData.name}
             onChange={handleChange}
           />
           <FormField
@@ -496,15 +468,15 @@ const VirtualAssistantForAdminModal = ({
           <FormField
             label="Number"
             type="text"
-            name="number"
-            value={formData.number}
+            name="phoneNumber"
+            value={formData.phoneNumber}
             onChange={handleChange}
           />
           <FormField
             label="Client"
             type="text"
             name="client"
-            value={formData.client}
+            value={formData.client ? formData.client.name : ""}
             onChange={handleChange}
           />
           <FormField

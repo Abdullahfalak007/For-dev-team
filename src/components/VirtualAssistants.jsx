@@ -823,7 +823,7 @@ const VirtualAssistants = ({
                   Virtual Assistant
                   <div className="ml-2 flex flex-col">
                     <button
-                      onClick={() => sortData("virtualAssistant")}
+                      onClick={() => sortData("name")}
                       className="focus:outline-none"
                     >
                       <img
@@ -833,7 +833,7 @@ const VirtualAssistants = ({
                       />
                     </button>
                     <button
-                      onClick={() => sortData("virtualAssistant")}
+                      onClick={() => sortData("name")}
                       className="focus:outline-none"
                     >
                       <img
@@ -877,7 +877,7 @@ const VirtualAssistants = ({
                   Number
                   <div className="ml-2 flex flex-col">
                     <button
-                      onClick={() => sortData("number")}
+                      onClick={() => sortData("phoneNumber")}
                       className="focus:outline-none"
                     >
                       <img
@@ -887,7 +887,7 @@ const VirtualAssistants = ({
                       />
                     </button>
                     <button
-                      onClick={() => sortData("number")}
+                      onClick={() => sortData("phoneNumber")}
                       className="focus:outline-none"
                     >
                       <img
@@ -906,7 +906,7 @@ const VirtualAssistants = ({
           </thead>
           <tbody>
             {Array.isArray(data) &&
-              data.map((virtualAssistants, index) => (
+              data.map((virtualAssistant, index) => (
                 <tr
                   key={index}
                   className="border-t border-gray-300 hover:bg-gray-100 text-black font-inter text-[0.875rem] font-normal text-center"
@@ -914,16 +914,14 @@ const VirtualAssistants = ({
                   <td className="py-4 px-4 w-12">
                     <input type="checkbox" className="form-checkbox" />
                   </td>
-                  <td className="py-4">{virtualAssistants.id}</td>
-                  <td className="py-4 px-4">
-                    {virtualAssistants.virtualAssistant}
-                  </td>
-                  <td className="py-4 px-4">{virtualAssistants.email}</td>
-                  <td className="py-4 px-4">{virtualAssistants.number}</td>
+                  <td className="py-4">{virtualAssistant.id}</td>
+                  <td className="py-4 px-4">{virtualAssistant.name}</td>
+                  <td className="py-4 px-4">{virtualAssistant.email}</td>
+                  <td className="py-4 px-4">{virtualAssistant.phoneNumber}</td>
                   <td className="py-4 px-4 flex justify-center space-x-2">
                     <button
                       className="text-red-600 hover:text-red-800"
-                      onClick={() => handleDelete(virtualAssistants.id)}
+                      onClick={() => handleDelete(virtualAssistant.id)}
                     >
                       <img
                         src={imagesPath.VirtualAssistantTable.recycleBinIcon}
@@ -933,7 +931,7 @@ const VirtualAssistants = ({
                     </button>
                     <button
                       className="text-blue-600 hover:text-blue-800"
-                      onClick={() => openModal(virtualAssistants)}
+                      onClick={() => openModal(virtualAssistant)}
                     >
                       <img
                         src={imagesPath.VirtualAssistantTable.editIcon}

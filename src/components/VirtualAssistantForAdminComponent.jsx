@@ -984,7 +984,7 @@ const VirtualAssistantForAdminComponent = ({
                   Virtual Assistant
                   <div className="ml-2 flex flex-col">
                     <button
-                      onClick={() => sortData("virtualAssistant")}
+                      onClick={() => sortData("name")}
                       className="focus:outline-none"
                     >
                       <img
@@ -994,7 +994,7 @@ const VirtualAssistantForAdminComponent = ({
                       />
                     </button>
                     <button
-                      onClick={() => sortData("virtualAssistant")}
+                      onClick={() => sortData("name")}
                       className="focus:outline-none"
                     >
                       <img
@@ -1038,7 +1038,7 @@ const VirtualAssistantForAdminComponent = ({
                   Number
                   <div className="ml-2 flex flex-col">
                     <button
-                      onClick={() => sortData("number")}
+                      onClick={() => sortData("phoneNumber")}
                       className="focus:outline-none"
                     >
                       <img
@@ -1048,7 +1048,7 @@ const VirtualAssistantForAdminComponent = ({
                       />
                     </button>
                     <button
-                      onClick={() => sortData("number")}
+                      onClick={() => sortData("phoneNumber")}
                       className="focus:outline-none"
                     >
                       <img
@@ -1065,7 +1065,7 @@ const VirtualAssistantForAdminComponent = ({
                   Client
                   <div className="ml-2 flex flex-col">
                     <button
-                      onClick={() => sortData("client")}
+                      onClick={() => sortData("client.name")}
                       className="focus:outline-none"
                     >
                       <img
@@ -1075,8 +1075,9 @@ const VirtualAssistantForAdminComponent = ({
                       />
                     </button>
                     <button
-                      onClick={() => sortData("client")}
-                      className="focus:outline-none"
+                      onClick={() => sortData("client.name")}
+                      className="focus:outline
+-none"
                     >
                       <img
                         src={imagesPath.VirtualAssistantTable.arrowDownIcon}
@@ -1093,7 +1094,8 @@ const VirtualAssistantForAdminComponent = ({
                   <div className="ml-2 flex flex-col">
                     <button
                       onClick={() => sortData("bot")}
-                      className="focus:outline-none"
+                      className="focus
+"
                     >
                       <img
                         src={imagesPath.VirtualAssistantTable.arrowUpIcon}
@@ -1103,7 +1105,8 @@ const VirtualAssistantForAdminComponent = ({
                     </button>
                     <button
                       onClick={() => sortData("bot")}
-                      className="focus:outline-none"
+                      className="focus
+"
                     >
                       <img
                         src={imagesPath.VirtualAssistantTable.arrowDownIcon}
@@ -1130,14 +1133,15 @@ const VirtualAssistantForAdminComponent = ({
                     <input type="checkbox" className="form-checkbox" />
                   </td>
                   <td className="py-4">{assistant.id}</td>
-                  <td className="py-4 px-4">{assistant.virtualAssistant}</td>
+                  <td className="py-4 px-4">{assistant.name}</td>
                   <td className="py-4 px-4">{assistant.email}</td>
-                  <td className="py-4 px-4">{assistant.number}</td>
-                  <td className="py-4 px-4">{assistant.client}</td>
+                  <td className="py-4 px-4">{assistant.phoneNumber}</td>
+                  <td className="py-4 px-4">{assistant.client?.name || ""}</td>
                   <td className="py-4 px-4">{assistant.bot}</td>
                   <td className="py-4 px-4 flex justify-center space-x-2">
                     <button
-                      className="text-red-600 hover:text-red-800"
+                      className="text-red-600 hover
+"
                       onClick={() => handleDelete(assistant.id)}
                     >
                       <img
@@ -1147,7 +1151,7 @@ const VirtualAssistantForAdminComponent = ({
                       />
                     </button>
                     <button
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-blue-600 hover"
                       onClick={() => openModal(assistant)}
                     >
                       <img

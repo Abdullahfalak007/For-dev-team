@@ -622,20 +622,20 @@
     {
       "id": "3",
       "VirtualAssistant": "",
-      "number": "454455",
-      "email": "abdullahfalak@gmail.com",
-      "password": "adasdsa",
-      "virtualAssistant": "Abdullah Falak",
-      "client": "powerphase",
-      "bot": "Genbot"
+      "number": "asdas",
+      "email": "asdasasd@gmail.com",
+      "password": "asdasdsa",
+      "virtualAssistant": "asdasd",
+      "client": "Demo",
+      "bot": "SunBot"
     },
     {
       "id": "4",
       "VirtualAssistant": "",
-      "number": "sasdfsadfasdfsad",
-      "email": "sadfsdf",
-      "password": "asdfasdf",
-      "virtualAssistant": "sadfsdafda"
+      "number": "090078601",
+      "email": "asadali@gmail.com",
+      "password": "asd123",
+      "virtualAssistant": "Asad Ali"
     }
   ],
   "chatHistory": [

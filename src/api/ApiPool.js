@@ -46,16 +46,9 @@ export const userAPI = {
   addClient: (data) => api.post(clients, data),
   updateClient: (id, data) => api.put(`${clients}/${id}`, data),
   deleteClient: (id) => api.delete(`${clients}/${id}`),
-  virtualAssistants: () => {
-    return api.get(virtualAssistants);
-  },
-  addVirtualAssistant: (data) => {
-    return api.post(virtualAssistants, data);
-  },
-  updateVirtualAssistant: (id, data) => {
-    return api.put(`${virtualAssistants}/${id}`, data);
-  },
-  deleteVirtualAssistant: (id) => {
-    return api.delete(`${virtualAssistants}/${id}`);
-  },
+  virtualAssistants: () => api.get(virtualAssistants),
+  addVirtualAssistant: (data) => api.post(virtualAssistants, data),
+  updateVirtualAssistant: (id, data) =>
+    api.put(`${virtualAssistants}/${id}`, data),
+  deleteVirtualAssistant: (id) => api.delete(`${virtualAssistants}/${id}`),
 };

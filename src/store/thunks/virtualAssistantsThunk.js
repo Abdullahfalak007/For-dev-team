@@ -28,17 +28,8 @@ export const fetchVirtualAssistants = createAsyncThunk(
 
 export const addVirtualAssistant = createAsyncThunk(
   "virtualAssistants/addVirtualAssistant",
-  async (assistantData, { getState }) => {
-    const state = getState();
-    const assistants = state.virtualAssistants.identifier;
-    const maxId =
-      assistants.length > 0
-        ? Math.max(...assistants.map((assistant) => parseInt(assistant.id)))
-        : 0;
-    const newId = (maxId + 1).toString(); // Ensure the ID is a string
-    const newAssistantData = { ...assistantData, id: newId };
-
-    const response = await userAPI.addVirtualAssistant(newAssistantData);
+  async (assistantData) => {
+    const response = await userAPI.addVirtualAssistant(assistantData);
     return response.data;
   }
 );
