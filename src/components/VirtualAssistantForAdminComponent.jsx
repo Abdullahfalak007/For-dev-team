@@ -879,6 +879,7 @@
 // export default VirtualAssistantForAdminComponent;
 
 // src/components/virtualAssistantForAdminComponent.jsx
+// src/components/virtualAssistantForAdminComponent.jsx
 import React, { useState, useEffect } from "react";
 import imagesPath from "../data/imagesPath.json";
 import VirtualAssistantForAdminModal from "./VirtualAssistantForAdminModal";
@@ -1076,8 +1077,7 @@ const VirtualAssistantForAdminComponent = ({
                     </button>
                     <button
                       onClick={() => sortData("client.name")}
-                      className="focus:outline
--none"
+                      className="focus:outline-none"
                     >
                       <img
                         src={imagesPath.VirtualAssistantTable.arrowDownIcon}
@@ -1092,22 +1092,14 @@ const VirtualAssistantForAdminComponent = ({
                 <div className="flex items-center justify-center text-white font-inter text-[0.9375rem] font-medium">
                   Bot
                   <div className="ml-2 flex flex-col">
-                    <button
-                      onClick={() => sortData("bot")}
-                      className="focus
-"
-                    >
+                    <button onClick={() => sortData("bot")} className="focus">
                       <img
                         src={imagesPath.VirtualAssistantTable.arrowUpIcon}
                         alt="Up"
                         className="w-3 h-3"
                       />
                     </button>
-                    <button
-                      onClick={() => sortData("bot")}
-                      className="focus
-"
-                    >
+                    <button onClick={() => sortData("bot")} className="focus">
                       <img
                         src={imagesPath.VirtualAssistantTable.arrowDownIcon}
                         alt="Down"
@@ -1140,8 +1132,7 @@ const VirtualAssistantForAdminComponent = ({
                   <td className="py-4 px-4">{assistant.bot}</td>
                   <td className="py-4 px-4 flex justify-center space-x-2">
                     <button
-                      className="text-red-600 hover
-"
+                      className="text-red-600 hover"
                       onClick={() => handleDelete(assistant.id)}
                     >
                       <img

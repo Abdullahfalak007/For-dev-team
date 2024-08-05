@@ -716,6 +716,7 @@
 // export default VirtualAssistants;
 
 // src/components/VirtualAssistants.jsx
+// src/components/VirtualAssistants.jsx
 import React, { useState, useEffect } from "react";
 import imagesPath from "../data/imagesPath.json";
 import Modal from "./Modal";

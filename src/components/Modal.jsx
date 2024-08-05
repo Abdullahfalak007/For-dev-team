@@ -136,7 +136,6 @@
 // };
 
 // export default Modal;
-
 import React, { useRef, useEffect, useState } from "react";
 import imagesPath from "../data/imagesPath.json";
 import FormField from "./FormField";

@@ -79,9 +79,9 @@ const VirtualAssistantPageForAdmin = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     id: null,
-    virtualAssistant: "",
+    name: "",
     email: "",
-    number: "",
+    phoneNumber: "",
     client: "",
     bot: "",
   });
@@ -94,9 +94,9 @@ const VirtualAssistantPageForAdmin = () => {
     } else {
       setFormData({
         id: null,
-        virtualAssistant: "",
+        name: "",
         email: "",
-        number: "",
+        phoneNumber: "",
         client: "",
         bot: "",
       });
